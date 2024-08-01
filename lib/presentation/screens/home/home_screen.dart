@@ -4,6 +4,7 @@ import 'package:widgets_app/config/constants/app_menu_items.dart';
 import '../../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home';
   const HomeScreen({super.key});
 
   @override
