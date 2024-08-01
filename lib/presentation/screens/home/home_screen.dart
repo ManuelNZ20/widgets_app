@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/constants/app_menu_items.dart';
 
+import '../../widgets/widgets.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -20,27 +22,15 @@ class _HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
     return ListView.builder(
       itemCount: appMenuItems.length,
       itemBuilder: (context, index) {
         final menuItem = appMenuItems[index];
-        return ListTile(
-          title: Text(menuItem.title),
-          subtitle: Text(menuItem.subTitle),
-          leading: Icon(
-            menuItem.icon,
-            color: colors.primary,
-          ),
-          trailing: IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.arrow_forward_ios_rounded,
-            ),
-          ),
-          onTap: () {
-            // menuItem.link
-          },
+        return ListTileMenuItem(
+          title: menuItem.title,
+          subTitle: menuItem.subTitle,
+          icon: menuItem.icon,
+          link: menuItem.link,
         );
       },
     );
