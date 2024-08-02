@@ -100,7 +100,6 @@ class _ButtonsView extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(Icons.flutter_dash),
             ),
-            // TODO: Custom Button
             const CustomButton(),
           ],
         ),
